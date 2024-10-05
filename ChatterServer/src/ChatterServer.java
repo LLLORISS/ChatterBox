@@ -18,7 +18,7 @@ public class ChatterServer {
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("New client connected");
 
-                new Thread(new ClientHandler(clientSocket)).start();
+                new Thread(new ClientHandler(clientSocket, this)).start();
             }
         }catch(IOException e){
             System.out.println("Server failed to start on port " + PORT);

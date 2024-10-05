@@ -13,7 +13,7 @@ public class ClientHandler implements Runnable{
     private BufferedReader in;
     private String clientName; //to future change
 
-    public ClientHandler(Socket socket){
+    public ClientHandler(Socket socket, ChatterServer server){
         this.clientSocket = socket;
         this.server = server;
     }
