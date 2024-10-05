@@ -5,14 +5,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Scanner;
+
+import Database.ChatterDB;
 
 public class HelloApplication extends Application {
 
@@ -45,6 +48,14 @@ public class HelloApplication extends Application {
             System.out.print("Enter your name: ");
             String clientName = scanner.nextLine();
             out.println(clientName);
+
+            //Приклад підключення sql
+            try(Connection connection = ChatterDB.getConnection()) {
+                System.out.println("Success");
+            }
+            catch(SQLException e){
+
+            }
 
         }
         catch(IOException e){
