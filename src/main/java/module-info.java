@@ -10,6 +10,8 @@ module org.example.chatterbox {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
+    requires ChatterServer;
 
     opens org.example.chatterbox to javafx.fxml;
     exports org.example.chatterbox;
