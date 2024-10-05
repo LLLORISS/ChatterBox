@@ -17,7 +17,6 @@ import java.util.Scanner;
 
 import Database.ChatterDB;
 
-
 public class MainApp extends Application {
 
     private static final String SERVER_ADRESS = "192.168.0.110";

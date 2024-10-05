@@ -1,4 +1,4 @@
-package Database;
+package org.example.chatterbox;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
