@@ -26,11 +26,12 @@ public class ChatterServer {
         }
     }
 
-    public static void registerClient(String clientName, ClientHandler handler) {
-
+    public synchronized void registerClient(String clientName, ClientHandler handler) {
+        clientHandlers.put(clientName, handler);
+        System.out.print("Client " + clientName + " has joined to the server");
     }
 
-    public static void removeClient(String clientName) {
+    public synchronized void removeClient(String clientName) {
         clientHandlers.remove(clientName);
         System.out.println("Client disconnected: " + clientName);
     }

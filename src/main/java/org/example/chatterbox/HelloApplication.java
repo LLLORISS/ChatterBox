@@ -11,13 +11,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) {
-        Button button = new Button("Click Me!");
-        button.setOnAction(e -> System.out.println("Button Clicked!"));
 
-        Scene scene = new Scene(button, 300, 200);
-        stage.setScene(scene);
-        stage.setTitle("JavaFX Test");
-        stage.show();
     }
 
     public static void main(String[] args) {
