@@ -1,3 +1,5 @@
+package Server;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,8 +12,9 @@ public class ClientHandler implements Runnable{
     private ChatterServer server;
 
     private PrintWriter out;
-    private BufferedReader in;
-    private String clientName; //to future change
+    private BufferedReader in;//to future change
+    private String clientName;
+    // User user
 
     public ClientHandler(Socket socket, ChatterServer server){
         this.clientSocket = socket;
@@ -21,15 +24,13 @@ public class ClientHandler implements Runnable{
     @Override
     public void run(){
         try{
-           out = new PrintWriter(clientSocket.getOutputStream());
-           in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            out = new PrintWriter(clientSocket.getOutputStream());
+            in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
+            out.println("Enter your name: ");
+            clientName = in.readLine();
 
-           out.println("Enter your name: ");
-           clientName = in.readLine();
-
-           server.registerClient(clientName,this);
-
+            server.registerClient(clientName,this);
 
         }
         catch(Exception e){

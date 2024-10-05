@@ -1,3 +1,5 @@
+package Server;
+
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.IOException;
@@ -37,7 +39,7 @@ public class ChatterServer {
     }
 
     public static void main(String[] args){
-            ChatterServer server = new ChatterServer();
+        ChatterServer server = new ChatterServer();
 
     }
 }
