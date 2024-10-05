@@ -1,0 +1,92 @@
+.root {
+    -fx-background-color: linear-gradient(
+            from 99% 0% to 0% 1%,
+            rgba(40,120,175,1) 0%,
+            rgba(164,207,234,1) 78%
+    );
+}
+
+.login_container {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);
+    -fx-alignment: center;
+}
+
+.login_header {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+.text-field, .password-field {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 0 0 2 0;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: lightgray;
+    -fx-padding: 10;
+}
+
+.knopkaBlat {
+    -fx-background-color: linear-gradient(
+            from 99% 0% to 0% 1%,
+            rgba(40,120,175,1) 0%,
+            rgba(164,207,234,1) 78%
+    );
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 10 10 10;
+    -fx-pref-width: 70px;
+    -fx-pref-height: 40px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);
+    -fx-cursor: hand;
+}
+
+.knopkaBlat:hover {
+    -fx-background-color: linear-gradient(
+            from 99% 0% to 0% 1%,
+            rgba(30,110,165,1) 0%,
+            rgba(154,197,224,1) 78%
+    );
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 10);
+}
+
+.button-container {
+    -fx-alignment: CENTER;
+}
+
+.remember-forgot-container {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-alignment: CENTER;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.remember-me {
+    -fx-translate-x: -30px;
+}
+
+.forgot-password {
+    -fx-translate-x: 30px;
+    -fx-text-fill: white;
+}
+
+.image-view {
+    -fx-image: url("/FMXL/images/loginIcon.png");
+    -fx-alignment: center;
+}
+
+.hyperlink-account {
+    -fx-alignment: center;
+    -fx-text-fill: white;
+}
