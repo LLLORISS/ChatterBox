@@ -15,4 +15,6 @@ module org.example.chatterbox {
 
     opens org.example.chatterbox to javafx.fxml;
     exports org.example.chatterbox;
+    exports org.example.chatterbox.Controllers;
+    opens org.example.chatterbox.Controllers to javafx.fxml;
 }

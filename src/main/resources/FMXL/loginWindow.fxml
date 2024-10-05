@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="430.0" prefWidth="600.0" styleClass="root" stylesheets="@Style/login.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chatterbox.Controllers.LoginWindowController">
+   <children>
+      <VBox alignment="BOTTOM_CENTER" layoutX="105.0" layoutY="16.0" prefHeight="377.0" prefWidth="382.0" styleClass="login_container" stylesheets="@Style/login.css">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/loginIcon.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="login_header" stylesheets="@Style/login.css" text="Sing in" textFill="WHITE" />
+            <TextField styleClass="password-field" stylesheets="@Style/login.css" text="Username">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <PasswordField styleClass="password-field" stylesheets="@Style/login.css" text="Password" />
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="remember-forgot-container">
+               <children>
+                  <CheckBox mnemonicParsing="false" styleClass="remember-me" text="Remember me" />
+                  <Hyperlink styleClass="forgot-password" stylesheets="@Style/login.css" text="Forgot password?" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="button-container">
+               <children>
+                  <Button alignment="TOP_RIGHT" minHeight="14.0" mnemonicParsing="false" styleClass="knopkaBlat" stylesheets="@Style/login.css" text="Login" />
+               </children>
+            </HBox>
+            <Hyperlink styleClass="hyperlink-account" stylesheets="@Style/login.css" text="Don't have an account? Register now" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
